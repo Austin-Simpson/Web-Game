@@ -28,8 +28,21 @@ const Grid = ({
 
   return (
     <main>
-      <h1>Grid</h1>
-
+      <h1>Choco Banana Puzzle</h1>
+      <h4> by Nikoli </h4>
+      <h2>Rules:</h2>
+      <p>Paint some of the cells black under the following rules.</p>
+      <p>
+        Black cells linked vertically and horizontally must always form a
+        rectangle or a square.
+      </p>
+      <p>
+        White cells (unpainted cells) linked vertically and horizontally must
+        not form a rectangle or a square.
+      </p>
+      <p>
+        A number indicates the number of cells of the area containing this cell.
+      </p>
       {rows.map((row, rowIndex) => (
         <ul className="row" key={rowIndex}>
           {cells.map((cell, cellIndex) => (
