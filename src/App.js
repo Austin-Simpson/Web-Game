@@ -11,30 +11,8 @@ export default function App() {
   const [grid, setGrid] = useState(gridBase);
 
   const [boards, setBoards] = useState([
-    { // board 1
-      shadeBoard: [
-        [false, false, false, false, false],
-        [false, false, false, false, false],
-        [false, false, false, false, false],
-        [false, false, false, false, false],
-        [false, false, false, false, false]
-      ],
-      solutionBoard: [
-        [false, false, false, false, false],
-        [false, false, true, true, false],
-        [false, true, false, true, false],
-        [false, true, false, false, true],
-        [false, false, true, true, false]
-      ],
-      numberBoard: [
-        [0, 0, 0, 0, 0],
-        [0, 0, 2, 2, 0],
-        [0, 2, 0, 2, 0],
-        [0, 1, 0, 1, 1],
-        [0, 0, 2, 2, 0]
-      ]
-    },
-    { // board 2
+    {
+      // board 1
       shadeBoard: [
         [false, false, false, false, false],
         [false, false, false, false, false],
@@ -57,7 +35,8 @@ export default function App() {
         [1, 0, 1, 0, 0]
       ]
     },
-    { // board 3
+    {
+      // board 2
       shadeBoard: [
         [false, false, false, false, false],
         [false, false, false, false, false],
@@ -66,18 +45,42 @@ export default function App() {
         [false, false, false, false, false]
       ],
       solutionBoard: [
-        [false, false, false, false, false, false],
-        [true, true, true, false, true, false],
-        [true, true, true, false, true, false],
-        [false, false, false, true, false, false],
-        [true, false, true, false, false, false]
+        [true, false, true, false, true],
+        [false, false, true, false, false],
+        [false, true, false, true, false],
+        [false, true, false, true, false],
+        [true, false, false, true, false]
       ],
       numberBoard: [
-        [0, 0, 0, 0, 0, 0],
-        [0, 2, 2, 0, 2, 0],
-        [0, 2, 4, 0, 2, 0],
-        [0, 0, 0, 3, 0, 0],
-        [2, 0, 2, 0, 0, 0]
+        [0, 0, 0, 0, 1],
+        [0, 0, 0, 0, 0],
+        [0, 2, 0, 3, 0],
+        [5, 0, 4, 0, 0],
+        [0, 0, 0, 0, 0]
+      ]
+    },
+    {
+      // board 3
+      shadeBoard: [
+        [false, false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false, false]
+      ],
+      solutionBoard: [
+        [false, true, false, false, false],
+        [false, false, true, true, false],
+        [false, true, false, false, false],
+        [false, true, false, true, true],
+        [false, true, false, true, true]
+      ],
+      numberBoard: [
+        [0, 1, 0, 0, 0],
+        [0, 0, 2, 0, 0],
+        [0, 3, 0, 0, 0],
+        [0, 0, 0, 4, 0],
+        [0, 0, 0, 0, 0]
       ]
     }
     // Add more boards here
@@ -132,15 +135,15 @@ export default function App() {
   return (
     <div className="app">
       <div className="container">
-      <Grid
-        grid={grid}
-        handleSquareClick={handleSquareClick}
-        checkSolution={checkSolution}
-        switchBoard={switchBoard}
-        selectedBoard={selectedBoard}
-        boards={boards}
-        showSolution={showSolution}
-      />
+        <Grid
+          grid={grid}
+          handleSquareClick={handleSquareClick}
+          checkSolution={checkSolution}
+          switchBoard={switchBoard}
+          selectedBoard={selectedBoard}
+          boards={boards}
+          showSolution={showSolution}
+        />
       </div>
     </div>
   );
