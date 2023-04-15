@@ -131,6 +131,7 @@ export default function App() {
 
   return (
     <div className="app">
+      <div className="container">
       <Grid
         grid={grid}
         handleSquareClick={handleSquareClick}
@@ -140,6 +141,7 @@ export default function App() {
         boards={boards}
         showSolution={showSolution}
       />
+      </div>
     </div>
   );
 }
